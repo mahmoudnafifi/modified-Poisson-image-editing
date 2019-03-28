@@ -1,4 +1,4 @@
-# modified-Poisson-image-editing
+# MPB: A modified Poisson blending technique
 
 Implementation of image blending using "MPB: A modified Poisson blending technique". This method performs natural image blending using a modified version of Poisson image editing.
 
