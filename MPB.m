@@ -1,6 +1,6 @@
 %MPB: A modified Poisson blending technique
 %Read the paper: http://link.springer.com/article/10.1007/s41095-015-0027-z
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %Citation:
 %@article{
 %year={2015},
@@ -15,16 +15,15 @@
 %pages={1-11},
 %language={English}
 %}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %Source Code is based on Ryoichi Ando Poisson code.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 function F = MPB( foreground, background, mask , out )
  tic;
-background = double(background)/255.0;
-foreground = double(foreground)/255.0;
-mask = double(mask)/255.0;
-F = zeros(size(foreground));
+background = im2double(background);
+foreground = im2double(foreground);
+mask = im2double(mask);
 F=blending(foreground,background,mask);
 mask=imcomplement(mask);
 F=blending(background,F,mask);
@@ -42,7 +41,6 @@ function F = gradientBlending( background, foreground, mask )
 [h,w] = size(foreground);
 n = w*h;
 A = sparse(n,n);
-f = zeros(n,1);
 fx = find(mask > 0); 
 bx = find(mask == 0); 
 q = zeros(n,1);

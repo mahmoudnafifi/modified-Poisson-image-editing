@@ -1,6 +1,6 @@
 %MPB: A modified Poisson blending technique
 %Read the paper: http://link.springer.com/article/10.1007/s41095-015-0027-z
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %Citation:
 %@article{
 %year={2015},
@@ -17,6 +17,7 @@
 %}
 
 %Apply the third step in MPB (Solve Color bleeding Problem)
+
 function F = MPB_2( fg, bg, mask , out)
 T=0.2;
 Ha=20;
@@ -41,7 +42,6 @@ gaussian = imfilter(average+1,H,'same');
 temp1=double(fg1).*double(imcomplement(gaussian))/255;
 temp2=double(fg2).*double(gaussian)/255;
 result=temp1+temp2;
-imshow(result/255);
 delete('temp1.jpg');
 delete('temp2.jpg');
 imwrite(result/255,out);
