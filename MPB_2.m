@@ -19,13 +19,14 @@
 %Apply the third step in MPB (Solve Color bleeding Problem)
 
 function F = MPB_2( fg, bg, mask , out)
-T=0.2;
+%you can tune these parameters to get different results
+T=0.25; 
 Ha=20;
 N1=100;
 N2=100;
 gamma=0.1;
 MPB(fg,bg,mask(:,:,1),'temp1.jpg');
-MPB(fg,bg,mask(:,:,1),'temp2.jpg');
+MPB(bg,fg,255-mask(:,:,1),'temp2.jpg');
 fg1=imread('temp1.jpg');
 fg2= imread('temp2.jpg');
 differentFrame= (fg1-bg)+(bg-fg1);
