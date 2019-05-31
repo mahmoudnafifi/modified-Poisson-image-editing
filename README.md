@@ -6,7 +6,7 @@ Assiut University, Egypt
 
 Read our [paper](https://link.springer.com/article/10.1007/s41095-015-0027-z).
 
-<p align="center"><img src="https://drive.google.com/uc?export=view&id=12X5gNmzPbyKKne0mg0ruij2JEHSL5Vmm" style="width: 300px; max-width: 70%; height: auto" title="Click for the larger version." /></p>
+<img src="https://drive.google.com/uc?export=view&id=12X5gNmzPbyKKne0mg0ruij2JEHSL5Vmm" style="width: 300px; max-width: 70%; height: auto" title="Click for the larger version." />
 
 
 
