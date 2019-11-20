@@ -15,3 +15,4 @@ This is the Matlab implementation of image blending using "MPB: A modified Poiss
 ### Publication
 Mahmoud Afifi and Khaled F. Hussain, MPB: A modified Poisson blending technique, Computational Visual Media, 1(4), 331-341, 2015.
 
+[![View modified-Poisson-image-editing on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/55442-modified-poisson-image-editing)
